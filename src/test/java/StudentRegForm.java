@@ -14,7 +14,7 @@ public class StudentRegForm {
     }
 
     @Test
-    void myfirsttest() {
+    void testingAutomationForm() {
         open("https://demoqa.com/automation-practice-form");
         $("#firstName").setValue("Alexander");
         $("#lastName").setValue("Ignatenko");
