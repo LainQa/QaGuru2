@@ -8,11 +8,6 @@ import static com.codeborne.selenide.Selenide.*;
 import java.io.File;
 
 public class StudentRegForm {
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize= "2560x1440";
-    }
-
     @Test
     void testingAutomationForm() {
         open("https://demoqa.com/automation-practice-form");
