@@ -1,13 +1,11 @@
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import java.io.File;
 
-public class StudentRegForm {
+public class StundentRegForm {
     @Test
     void testingAutomationForm() {
         open("https://demoqa.com/automation-practice-form");
