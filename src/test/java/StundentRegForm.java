@@ -1,6 +1,5 @@
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
-import helpers.TestBase;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
