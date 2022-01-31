@@ -8,16 +8,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.codeborne.selenide.Selenide;
 
 public class TestBase{
+
     @BeforeAll
     static void setup() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.browserSize = ("1920x1080");
+        Configuration.startMaximized = true;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-
         Configuration.browserCapabilities = capabilities;
     }
 
@@ -26,7 +25,7 @@ public class TestBase{
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Selenide.closeWebDriver();
         Attach.addVideo();
+        Selenide.closeWebDriver();
     }
 }

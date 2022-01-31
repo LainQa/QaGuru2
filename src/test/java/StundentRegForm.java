@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Selenide.*;
 import java.io.File;
 
 public class StundentRegForm extends TestBase {
+
     @Test
     void testingAutomationForm() {
         open("https://demoqa.com/automation-practice-form");
