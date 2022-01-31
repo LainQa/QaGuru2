@@ -28,7 +28,7 @@ public class StundentRegForm extends TestBase {
         $("#state").find(byText("Haryana")).click();
         $("#city").click();
         $("#city").find(byText("Panipat")).click();
-        $(".form-control-file").uploadFile(new File("src/test/java/resources/1.jpg"));
+        $(".form-control-file").uploadFile(new File("src/test/resources/img/1.jpg"));
         $("#submit").click();
         $("#example-modal-sizes-title-lg").shouldHave(Condition.text("Thanks for submitting the form"));
         $$(".table-responsive tr").shouldHave(CollectionCondition.texts
