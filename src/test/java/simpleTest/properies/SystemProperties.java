@@ -17,7 +17,8 @@ public class SystemProperties {
     void someTest1() {
         String login = credentials.login();
         String password = credentials.password();
-        String url = System.getProperty("url", "selenoid.autotests.cloud/wd/hub/");
-        Configuration.remote = format("https://%s:%s@%s", login, password, url);
+        Configuration.remote = format("https://%s:%s@%s", login, password, System.getProperty("RemoteBrowserUrl"));
+        System.out.println(login);
+        System.out.println(password);
     }
 }
