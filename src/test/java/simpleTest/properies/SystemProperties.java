@@ -17,8 +17,6 @@ public class SystemProperties {
     void someTest1() {
         String login = credentials.login();
         String password = credentials.password();
-        Configuration.remote = format("https://%s:%s@%s", login, password, System.getProperty("testUrl"));
-        System.out.println(login);
-        System.out.println(password);
+        Configuration.remote = format("https://%s:%s@%s", login, password, System.getProperty("url"));
     }
 }
