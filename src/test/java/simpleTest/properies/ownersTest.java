@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static java.lang.String.format;
 
-public class SystemProperties {
+public class ownersTest {
     public CredentialsConfig credentials =
             ConfigFactory.create(CredentialsConfig.class);
 
