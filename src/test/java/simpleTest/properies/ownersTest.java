@@ -6,14 +6,16 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import simpleTest.TestBase;
 
 import static io.qameta.allure.Allure.step;
 import static java.lang.String.format;
 
 @Tag("properties")
-public class ownersTest {
+public class ownersTest  extends TestBase {
     public CredentialsConfig credentials =
             ConfigFactory.create(CredentialsConfig.class);
+
 
     @Test
     @DisplayName("Вывод логина и пароля")
