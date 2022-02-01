@@ -2,6 +2,7 @@ package simpleTest;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -10,7 +11,8 @@ import java.io.File;
 public class StundentRegForm extends TestBase {
 
     @Test
-    void testingAutomationForm() {
+    @Tag("new")
+    void automationFormTest() {
         open("https://demoqa.com/automation-practice-form");
         $("#firstName").setValue("Alexander");
         $("#lastName").setValue("Ignatenko");
