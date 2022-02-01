@@ -17,14 +17,15 @@ public class TestBase {
     @BeforeAll
     static void setup() {
         CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
+        Configuration.remote = format("https://%s:%s@%s", credentials.login(),
+                credentials.password(), System.getProperty("url"));
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.browserSize = "2140x1440";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-        Configuration.remote = format("https://%s:%s@%s", credentials.login(),
-                credentials.password(), System.getProperty("url"));
+
     }
 
     @AfterEach

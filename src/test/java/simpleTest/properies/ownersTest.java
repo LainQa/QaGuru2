@@ -26,7 +26,7 @@ public class ownersTest  extends TestBase {
             step("Вывод того, что прочитали", () -> {
                 System.out.println(login);
                 System.out.println(password);
-                String message = format("i login as %s with password %s", login, password);
+                String message = format("i login as %s with password %s on website", login, password);
                 System.out.println(message);
             });
         });
