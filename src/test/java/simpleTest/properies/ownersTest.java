@@ -16,12 +16,12 @@ public class ownersTest {
             ConfigFactory.create(CredentialsConfig.class);
 
     @Test
-    @DisplayName("Вывод на экран логина и пароля")
+    @DisplayName("Вывод логина и пароля")
     void readCredentialsTest2() {
         step("Читаем данные из файла", () -> {
             String login = credentials.login();
             String password = credentials.password();
-            step("Выводим, что прочитали", () -> {
+            step("Вывод того, что прочитали", () -> {
                 System.out.println(login);
                 System.out.println(password);
                 String message = format("i login as %s with password %s", login, password);
