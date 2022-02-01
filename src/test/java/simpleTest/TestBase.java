@@ -19,8 +19,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-
-        String selenoidUrl = System.getProperty("url"); // clean new -Durl={'JENKINS_VALUE'}
+        String selenoidUrl = System.getProperty("url"); // clean properties_test -Durl={'JENKINS_VALUE'}
         String login = credentials.login();
         String password = credentials.password();
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -29,7 +28,6 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-
         Configuration.browserCapabilities = capabilities;
     }
 
