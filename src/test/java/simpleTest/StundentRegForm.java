@@ -10,8 +10,8 @@ import java.io.File;
 
 public class StundentRegForm extends TestBase {
 
-    @Test
     @Tag("new")
+    @Test
     void automationFormTest() {
         open("https://demoqa.com/automation-practice-form");
         $("#firstName").setValue("Alexander");
